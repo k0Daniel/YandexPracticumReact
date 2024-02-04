@@ -4,7 +4,7 @@ export const Footer = () => {
 	return (
 		<footer className={Styles.footer}>
 			<a href='./index.html' className={Styles.logo}>
-				<span className={Styles['logo - name']}>pindie</span>
+				<span className={Styles['logo-name']}>pindie</span>
 				<span className={Styles['logo-copy']}>, XXI век</span>
 			</a>
 			<ul className={Styles['social-list']}>
