@@ -8,7 +8,7 @@ export const Promo = () => {
 				<p className={Styles.description}>Скидка на все курсы Яндекс Практикума для пользователей нашего сайта!</p>
 				<button className={`button ${Styles['promo__button']}`}>Получить код</button>
 			</div>
-			<img src='./images/promo-illustration.svg' alt='Собака' className={Styles.image} />
+			<img src='/images/promo-illustration.svg' alt='Собака' className={Styles.image} />
 		</section>
 	);
 };

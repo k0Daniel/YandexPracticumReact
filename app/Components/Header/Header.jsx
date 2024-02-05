@@ -4,7 +4,7 @@ export const Header = () => {
 	return (
 		<header className={Styles['header']}>
 			<a href='./index.html' className={Styles['logo']}>
-				<img className={Styles['logo__image']} src='./images/logo.svg' alt='Логотип Pindie' />
+				<img className={Styles['logo__image']} src='/images/logo.svg' alt='Логотип Pindie' />
 			</a>
 			<nav className={Styles['menu']}>
 				<ul className={Styles['menu__list']}>

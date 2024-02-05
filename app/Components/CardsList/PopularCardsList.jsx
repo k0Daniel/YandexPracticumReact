@@ -1,5 +1,6 @@
 import Styles from './CardsList.module.css';
 import { PopularCadsFragment } from './PopularCardsFragment';
+
 export const PopularCardsList = () => {
 	return (
 		<section className={Styles.section}>

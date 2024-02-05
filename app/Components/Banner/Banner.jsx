@@ -15,7 +15,7 @@ export const Banner = () => {
 					Смотреть игры
 				</a>
 			</div>
-			<img src='./images/banner-illustration.jpg' alt='Рука, утопленная в желтом фоне' className={Styles.image} />
+			<img src='/images/banner-illustration.jpg' alt='Рука, утопленная в желтом фоне' className={Styles.image} />
 		</section>
 	);
 };
