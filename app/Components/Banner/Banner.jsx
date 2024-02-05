@@ -3,7 +3,7 @@ import Styles from './Banner.module.css';
 export const Banner = () => {
 	return (
 		<section className={Styles.banner}>
-			<div className={Styles['banner__description']}>
+			<div className={Styles.description}>
 				<h1 className={Styles.title}>Портал инди-игр от&nbsp;студентов Яндекс Практикума</h1>
 				<div className={Styles['text-block']}>
 					<p className={Styles.text}>
@@ -11,7 +11,7 @@ export const Banner = () => {
 						если у вас есть аккаунт пользователя — получаете возможность голосовать за игры.
 					</p>
 				</div>
-				<a href='#popular' className={`${Styles.button} ${Styles.link}`}>
+				<a href='#popular' className={`button ${Styles.link}`}>
 					Смотреть игры
 				</a>
 			</div>
