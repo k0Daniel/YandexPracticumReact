@@ -1,5 +1,5 @@
 import Styles from './CardsList.module.css';
-export const PopularCadsFragment = () => {
+export const PopularCardsFragment = () => {
 	return (
 		<>
 			<li className={Styles['cards__item']}>
