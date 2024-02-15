@@ -8,12 +8,8 @@ export default function Home() {
 	return (
 		<main>
 			<Banner />
-			<CardsList id='popular' title='Популярные'>
-				<PopularCardsFragment />
-			</CardsList>
-			<CardsList id='new' title='Новинки'>
-				<NewCardsFragment />
-			</CardsList>
+			<CardsList id='popular' title='Популярные'></CardsList>
+			<CardsList id='new' title='Новинки'></CardsList>
 			<Promo />
 		</main>
 	);
