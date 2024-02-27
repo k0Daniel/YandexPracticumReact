@@ -20,9 +20,13 @@ export const Header = () => {
 	const pathname = usePathname();
 	return (
 		<header className={Styles['header']}>
-			<Link href='/' className={Styles['logo']}>
-				<img className={Styles['logo__image']} src='/images/logo.svg' alt='Логотип Pindie' />
-			</Link>
+			{pathname === '/' ? (
+				<img className={Styles['logo']} src='/images/logo.svg' alt='Логотип Pindie' />
+			) : (
+				<Link href='/' className={Styles['logo']}>
+					<img className={Styles['logo__image']} src='/images/logo.svg' alt='Логотип Pindie' />
+				</Link>
+			)}
 			<nav className={Styles['menu']}>
 				<ul className={Styles['menu__list']}>
 					<li className={Styles['menu__item']}>
