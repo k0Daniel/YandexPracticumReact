@@ -1,8 +1,11 @@
+'use client';
 import Styles from './Game.module.css';
 import { getGameById } from '@/app/data/data-utils';
+import { useRouter } from 'next/navigation';
 
 export default function GamePage(props) {
 	const game = getGameById(props.params.id);
+	const router = useRouter();
 
 	return game ? (
 		<main className='main'>
@@ -25,7 +28,14 @@ export default function GamePage(props) {
 						За игру уже проголосовали:
 						<span className={Styles['about__accent']}>{game.users.length}</span>
 					</p>
-					<button className={`button ${Styles['about__vote-button']}`}>Голосовать</button>
+					<button
+						className={`button ${Styles['about__vote-button']}`}
+						onClick={() => {
+							router.push('/auth-page');
+						}}
+					>
+						Голосовать
+					</button>
 				</div>
 			</section>
 		</main>
