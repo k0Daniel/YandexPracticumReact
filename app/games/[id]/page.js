@@ -31,7 +31,8 @@ export default function GamePage(props) {
 		</main>
 	) : (
 		<section className={Styles['game']}>
-			<p>Такой игры не существует 😢</p>
+			<h1 className={Styles['not_found']}>404</h1>
+			<p className={Styles['not_found-p']}>Такой игры не существует 😢</p>
 		</section>
 	);
 }
