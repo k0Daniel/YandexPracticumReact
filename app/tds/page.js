@@ -1,12 +1,13 @@
-import { getGamesByCategory } from '../data/data-utils';
 import { CardsList } from '../Components/CardsList/CardsList';
+import { getNormalizedGamesDataByCategory } from '../api/api-utils';
+import { endpoints } from '../api/config';
 
-export default function New() {
-	const newGames = getGamesByCategory('TDS');
+export default async function New() {
+	const tdsGames = await getNormalizedGamesDataByCategory(endpoints.games, 'TDS');
 
 	return (
 		<main>
-			<CardsList id='TDS' title='TDS' data={newGames} />
+			<CardsList id='TDS' title='TDS' data={tdsGames} />
 		</main>
 	);
 }
