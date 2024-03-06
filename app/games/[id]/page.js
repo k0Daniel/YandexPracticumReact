@@ -1,7 +1,6 @@
 'use client';
 import { getNormalizedGameDataById, isResponseOk } from '@/app/api/api-utils';
 import Styles from './Game.module.css';
-import { getGameById } from '@/app/data/data-utils';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { endpoints } from '@/app/api/config';
