@@ -31,3 +31,20 @@ export const getNormalizedGameDataById = async (url, id) => {
 	const data = await getData(`${url}/${id}`);
 	return isResponseOk(data) ? normalizeDataObject(data) : data;
 };
+
+export const authorize = async (url, data) => {
+	try {
+		const response = await fetch(url, {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify(data)
+		});
+		if (response.status !== 200) {
+			throw new Error('Ошибка авторизации');
+		}
+		const result = await response.json();
+		return result;
+	} catch (error) {
+		return error;
+	}
+};
