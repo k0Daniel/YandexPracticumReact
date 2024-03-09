@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import Styles from './AuthForm.module.css';
 import { endpoints } from '@/app/api/config';
-import { authorize } from '@/app/api/api-utils';
+import { authorize, getMe, setJWT } from '@/app/api/api-utils';
 import { isResponseOk } from '@/app/api/api-utils';
 
 export const AuthForm = props => {
@@ -20,7 +20,9 @@ export const AuthForm = props => {
 		console.log('Auth Data:', authData);
 		const userData = await authorize(endpoints.auth, authData);
 		if (isResponseOk(userData)) {
+			await getMe(endpoints.me, userData.jwt);
 			setUserData(userData);
+			setJWT(userData.jwt);
 			props.setAuth(true);
 			setMessage({ status: 'success', text: 'Вы авторизовались!' });
 		} else {
