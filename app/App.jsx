@@ -1,10 +1,12 @@
 'use client';
-import { Header } from './Components/Header/Header';
-import { Footer } from './Components/Footer/Footer';
+import { Header } from './components/Header/Header';
+import { Footer } from './components/Footer/Footer';
 
 import { useState, useEffect } from 'react';
-import { getJWT, setJWT, removeJWT, getMe } from './api/api-utils';
+import { AuthContext } from './context/app-context';
+
 import { endpoints } from './api/config';
+import { getJWT, setJWT, removeJWT, getMe } from './api/api-utils';
 
 export const App = props => {
 	const [isAuth, setIsAuth] = useState(false);
@@ -42,9 +44,11 @@ export const App = props => {
 	}, []);
 	return (
 		<>
-			<Header />
-			{props.children}
-			<Footer />
+			<AuthContext.Provider value={{ isAuth, user, token, login, logout }}>
+				<Header />
+				{props.children}
+				<Footer />
+			</AuthContext.Provider>
 		</>
 	);
 };
