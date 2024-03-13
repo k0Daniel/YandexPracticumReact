@@ -4,7 +4,7 @@ import { CardsList } from '../Components/CardsList/CardsList';
 import { endpoints } from '../api/config';
 import { Preloader } from '../Components/Preloader/Preloader';
 
-export default function New() {
+export default function newGames() {
 	const newGames = useGetDataByCategory(endpoints.games, 'new');
 	return (
 		<main className='main-inner'>
