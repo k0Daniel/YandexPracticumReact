@@ -4,11 +4,10 @@ import Styles from './AuthForm.module.css';
 import { endpoints } from '@/app/api/config';
 import { authorize } from '@/app/api/api-utils';
 import { isResponseOk } from '@/app/api/api-utils';
-import { useContext } from 'react';
-import { AuthContext } from '@/app/context/app-context';
+import { useStore } from '@/app/store/app-store';
 
 export const AuthForm = props => {
-	const authContext = useContext(AuthContext);
+	 const authContext = useStore();
 	const [authData, setAuthData] = useState({ identifier: '', password: '' });
 	const [message, setMessage] = useState({ status: null, text: null });
 	useEffect(() => {
