@@ -1,5 +1,5 @@
 import Styles from './Card.module.css';
-import { NewCardsFragment } from '../CardsList/NewCardsFragment';
+import { NewCardsFragment } from '../CardsListSection/NewCardsFragment';
 
 export const Card = props => {
 	return (

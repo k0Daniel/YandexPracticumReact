@@ -1,6 +1,6 @@
 import { getGamesByCategory } from './data/data-utils';
 import { Banner } from './Components/Banner/Banner';
-import { CardsList } from './Components/CardsList/CardsList';
+import { CardsListSection } from './Components/CardsListSection/CardsListSection';
 import { Promo } from './Components/Promo/Promo';
 
 export default function Home() {
@@ -9,8 +9,8 @@ export default function Home() {
 	return (
 		<main>
 			<Banner />
-			<CardsList id='popular' title='Популярные' data={popularGames} />
-			<CardsList id='new' title='Новинки' data={newGames} />
+			<CardsListSection type='slider' id='popular' title='Популярные' data={popularGames} />
+			<CardsListSection type='slider' id='new' title='Новинки' data={newGames} />
 			<Promo />
 		</main>
 	);
