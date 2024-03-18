@@ -75,7 +75,10 @@
 		padding: 80px 14px;
 	}
 	.image {
-		max-width: 500px;
+		max-width: 400px;
 		justify-self: start;
+	}
+	.promo__button {
+		margin-left: 32px;
 	}
 }
